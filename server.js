@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 const expressValidator = require('express-validator');
+
 require('dotenv').config();
 // import routes
 const authRoutes = require('./routes/auth');
@@ -22,7 +23,7 @@ const app = express();
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      process.env.MONGOURI,
+      "mongodb+srv://admin:XeHDqI6yb4f25mwB@shoeshop.eo4ng.mongodb.net/mernshop?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
